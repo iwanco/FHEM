@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HOME</title>
+</head>
+<body>
+
+<div class="gridster">
+<ul>
+<li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">HOME</header>
+	<div data-type="pagetab"
+		 data-device="st_alert"
+		 data-get-on='["off","[1-9]{1}|[0-9]{2}"]'
+		 data-url="index_home.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-home"
+		 data-icons='["fa-home","fa-home warn"]'
+		 class="bigger top-space">
+	</div>
+</li>
+
+<li class="halbTransparent" data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">HEIZUNG</header>
+	<div class="top-space">
+		<div class="inline">
+			<div data-type="checkbox"
+				 data-device="heatingcontrol_dummy"
+				 data-on-color="black"
+				 data-off-color="#808080"
+				 data-on-background-color="cornflowerblue"
+				 data-off-background-color="#3D4C66"
+				 class="green large cell top-space">
+			</div>
+			<div class="top-space">Wochenprogramm
+			</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">DWD</header>
+	<div data-type="pagetab"
+		 data-device="gds"
+		 data-get="a_count"
+		 data-get-on='["no","[1-9]{1}|[0-9]{2}"]'
+		 data-url="dwd.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-bolt"
+		 data-icons='["fa-bolt","fa-bolt warn"]'
+		 class="bigger top-space">
+	</div>
+</li>
+
+<li class="halbTransparent" data-row="1" data-col="5" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">AUßENTEMPERATUR</header>	
+	<div class="top-space">
+		<div class="inline" style="width:30%;">
+			<div data-type="label" 
+				 data-device="esp8266_DS18Temp_aussen"
+				 data-limits='[-73,18,28]' 
+				 data-colors='["cornflowerblue","green","firebrick"]' 
+				 data-unit="%B0C%0A" 
+				 data-substitution="s/(\d$)//g"
+				 class="big">
+			</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+			<div class="top-space">Temperatur
+			</div>
+		</div>
+		<div class="inline" style="width:30%;">
+				<div data-type="label" 
+					 data-device="Wetter_Pro"
+					 data-get="humidity"
+					 data-limits='[0,40,71]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="%" 
+					 class="big">
+				</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Luftfeuchte
+				</div>
+		</div>
+		<div class="inline" style="width:30%;">
+				<div data-type="label" 
+					 data-device="Wetter_Pro"
+					 data-get="dewPoint"
+					 data-limits='[-73,18,28]' 
+					 data-colors='["cornflowerblue","green","firebrick"]'  
+					 data-unit="%B0C%0A" 
+					 class="big">
+				</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Taupunkt
+				</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="1" data-col="7" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">WETTER</header>
+	<div data-type="pagetab"
+		 data-url="wetter.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-cloud"
+		 class="bigger top-space">
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="1" data-col="8" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">UHRZEIT / DATUM</header>
+	<div data-type="clock"
+		 data-format="H:i:s"
+		 data-interval="1000"
+		 class="orange bigger thin">
+	</div>
+	<div data-type="clock"
+		 data-format="D. d.m.Y"
+		 data-shortday-length="2"
+		 class="grey big">
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="2" data-col="1" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">RÄUME</header>
+	<div class="centered">
+		<div data-type="pagetab"
+			 data-device="bad_alert"
+			 data-icon="fa-tint"
+			 data-states='["off","on"]'
+			 data-url="bad.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-tint","fa-tint warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="bu_alert"
+			 data-icon="ro-pc"
+			 data-states='["off","on"]'
+			 data-url="buro.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["ro-pc","ro-pc warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="fl_alert"
+			 data-icon="ro-hanger"
+			 data-states='["off","on"]'
+			 data-url="flur.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["ro-hanger","ro-hanger warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="ku_alert"
+			 data-icon="fa-cutlery"
+			 data-states='["off","on"]'
+			 data-url="kuche.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="sz_alert"
+			 data-icon="fa-bed"
+			 data-states='["off","on"]'
+			 data-url="schlafzimmer.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-bed","fa-bed warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="wz_alert"
+			 data-icon="ro-sofa"
+			 data-states='["off","on"]'
+			 data-url="wohnzimmer.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["ro-sofa","ro-sofa warn"]'
+			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-device="dr_ga_alert"
+			 data-icon="fa-tree"
+			 data-states='["off","on"]'
+			 data-url="draussen_garage.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icons='["fa-tree","fa-tree warn"]'
+			 class="bigger">
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="2" data-col="2" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">AB</header>
+	<div class="top-space">
+		<div data-type="symbol"
+			 data-background-icon="none"
+			 data-device="FritzBox_7362"
+			 data-get="tam1_newMsg"
+			 data-states='["0","[1-9]{1}|[0-9]{2}"]'
+			 data-icons='["ma-voicemail","ma-voicemail warn"]'
+			 data-on-colors='["#808080","#aa6900"]'
+			 class="bigger">
+		</div>
+		<div class="">Nachrichten
+		</div>
+		<div data-type="switch"
+			 data-device="FritzBox_7362"
+			 data-get="tam1_state"
+			 data-set="tam 1"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="cornflowerblue"
+			 data-off-background-color="#3D4C66"
+			 data-icon="ma-voicemail"
+			 class="bigger top-space-2">
+		</div>
+		<div class="">An/Aus
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="2" data-col="3" data-sizex="5" data-sizey="2" style="overflow:auto;">
+	<header class="headerTransparent">ANRUFE</header>
+	<table width="100%" class="">
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="1-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="1-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="1-duration"
+					 class="">
+				</div>
+			</td>
+		</tr>
+		<tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="2-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="2-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="2-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+			<td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="3-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="3-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="3-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="4-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="4-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="4-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="5-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="5-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="5-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="6-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="6-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="6-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="7-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="7-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="7-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="8-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="8-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="8-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="9-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="9-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="9-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="10-state"
+					 data-states='["=>","=> X","=>  ((o))","=>  [=]","=> O_O"]'
+					 data-icons='["ma-call_end","ma-phone_missed","ma-ring_volume fa-blink","ma-phone_in_talk fa-blink","ma-voicemail"]'
+					 data-colors='["green","firebrick","firebrick","green","#aa6900"]'
+					 class="">
+				</div>
+			</td>
+            <td>
+                <div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-timestamp"
+					 data-part="1"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-timestamp"
+					 data-part="2"
+					 class="inline">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-timestamp"
+					 data-part="3"
+					 class="">
+				</div>
+            </td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-number"
+					 class="">
+				</div>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-name"
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="symbol"
+					 data-device="FritzBoxCallList"
+					 data-get="10-internal"
+					 data-get-on='["Wohnzimmer","Büro"]'
+					 data-icons='["ro-sofa","oa-scene_office"]'
+					 data-on-colors='["",""]'
+					 class="">
+				</div>
+			</td>
+            <td>
+				<div data-type="label"
+					 data-device="FritzBoxCallList"
+					 data-get="10-duration"
+					 class="">
+				</div>
+            </td>
+        </tr>
+	</table>
+</li>
+
+<li class="halbTransparent" data-row="2" data-col="8" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">MÜLL</header>
+	<div class="top-space">
+		<div data-type="button"
+			 data-background-icon="none"
+			 data-device="myAbfall"
+			 data-get="Restmuell_tage"
+			 data-off-color="#808080"
+			 data-fhem-cmd="setreading myAbfall Restmuell_tage off"
+			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
+			 data-icons='["ro-bin warn","ro-bin warn","ro-bin warn blink","ro-bin warn"]'
+			 data-on-colors='["#808080","#808080","#808080","#808080"]'
+			 class="bigger">
+		</div>
+		<div data-type="button"
+			 data-background-icon="none"
+			 data-device="myAbfall"
+			 data-get="Papier_tage"
+			 data-off-color="cornflowerblue"
+			 data-fhem-cmd="setreading myAbfall Papier_tage off"
+			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
+			 data-icons='["fs-bag warn","fs-bag warn","fs-bag warn blink","fs-bag warn"]'
+			 data-on-colors='["cornflowerblue","cornflowerblue","cornflowerblue","cornflowerblue"]'
+			 class="bigger">
+		</div>
+		<div data-type="button"
+			 data-background-icon="none"
+			 data-device="myAbfall"
+			 data-get="Plastik_tage"
+			 data-off-color="yellow"
+			 data-fhem-cmd="setreading myAbfall Plastik_tage off"
+			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
+			 data-icons='["fs-bag warn","fs-bag warn","fs-bag warn blink","fs-bag warn"]'
+			 data-on-colors='["yellow","yellow","yellow","yellow"]'
+			 class="bigger">
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+<div data-type="pagetab"
+		 data-url="abfahrt.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="ma-directions_bus"
+		 class="bigger">
+	</div>
+	<div data-type="pagetab"
+		 data-url="regenradar.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="oa-weather_rain"
+		 class="bigger">
+	</div>
+	<div data-type="popup"
+		 data-device="alarm_scharf"
+		 data-get-on="on"
+		 data-width="350px"
+		 data-height="525px">
+		<div data-type="symbol"
+			 data-device="dummy_alarm"
+			 data-states='["on","off"]'
+			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+			 data-colors='["firebrick","#808080"]'
+			 data-background-icons='["fa-circle","none"]'
+			 data-background-colors='["cornflowerblue","none"]'
+			 class="bigger">
+		</div>
+		<div class="dialog dialogTransparent">
+			<header class="dialogheaderTransparent">ALARM-STATUS</header>
+			<div class="top-space">
+				<div class="">Alarm scharf schalten:
+				</div>
+				<div onclick="$('.dialog-close').trigger('click');"
+					 data-type="switch"
+					 data-device="dummy_alarm"
+					 data-states='["on","off"]'
+					 data-set-states='["on","on"]'
+					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+					 data-colors='["firebrick","#808080"]'
+					 data-background-icons='["fa-circle","fa-circle"]'
+					 data-background-colors='["cornflowerblue","#3D4C66"]'
+					 class="bigger">
+				</div>
+			</div>
+			<div class="top-space">
+				<div class="">Alarm unscharf schalten (PIN-Code)
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="1"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">1
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="2"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">2
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="3"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">3
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="4"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">4
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="5"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">5
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="6"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">6
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="7"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">7
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="8"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">8
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="9"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">9
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="0"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">0
+					</div>
+					<div onclick="$('.dialog-close').trigger('click');"
+						 data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">OK
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="pagetab"
+		 data-url="rpi_status.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="fa-server"
+		 class="bigger">
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="4" data-col="2" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">ROMAN</header>
+	<div data-type="homestatus"
+		 data-device='rr_Roman'
+		 data-get-on='["home","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
+		 data-width="240"
+		 data-height="240"
+		 data-fgcolor="cornflowerblue"
+		 data-tkcolor="#3D4C66"
+		 data-mincolor="black"
+		 data-maxcolor="#808080"
+		 class="right right-space">
+	</div>
+	<div data-type="pagetab"
+		 data-url="kalender_roman.html"
+		 data-icon="fa-calendar"
+		 data-background-icon="fa-circle-thin"
+		 data-off-color="#808080"
+		 data-on-background-color="#aa6900"
+		 class="bigger left"
+		 style="top: -30px; right: -10px;">
+	</div>
+</li>
+
+<li class="halbTransparent" data-row="4" data-col="4" data-sizex="3" data-sizey="1">
+	<header class="headerTransparent">ECO-TASTER</header>
+	<div class="centered top-space-2">
+		<div data-type="link"
+			 data-width="160"
+			 data-height="60"
+			 data-color="black"
+			 data-background-color="green"
+			 data-icon="fa-home"
+			 data-fhem-cmd="setreading eco_taster onoff 1"
+			 class="round big inline">AUTO
+		</div>
+		<div data-type="link"
+			 data-width="160" 
+			 data-height="60"
+			 data-color="black"
+			 data-background-color="cornflowerblue"
+			 data-icon="ma-brightness_3"
+			 data-fhem-cmd="setreading eco_taster onoff 0"
+			 class="round big inline left-space-2">ECO
+		</div>
+	</div>	
+</li>
+
+<li class="halbTransparent" data-row="5" data-col="4" data-sizex="3" data-sizey="1">
+	<header class="headerTransparent">TÜR</header>
+	<div class="top-space">
+		<div class="inline">
+			<div data-type="push"
+				 data-device="fl_tueroeffner"
+				 data-set=""
+				 data-set-on="on-for-timer 4"
+				 data-icon="fa-key"
+				 data-off-color="#808080"
+				 data-off-background-color="#3D4C66"
+				 class="bigger right-space-3">
+			</div>
+			<div class="right-space-3">Summer<br />Haustür
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="KeyMatic"
+				 data-get="state"
+				 data-set=""
+				 data-states='["locked","unlocked"]'
+				 data-set-states='["unlock","lock"]'
+				 data-icons='["fa-lock","fa-unlock"]'
+				 data-background-icons='["fa-circle","fa-circle"]'
+				 data-colors='["green","firebrick"]'
+				 data-background-colors='["#3D4C66","cornflowerblue"]'
+				 class="bigger">
+			</div>
+			<div class="">Schloss<br />Wohnungstür
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="KeyMatic"
+				 data-get="door"
+				 data-set="door"
+				 data-states='["closed","open","MISSING.*"]'
+				 data-set-states='["open","",""]'
+				 data-icons='["ftui-door","ftui-door fa-lg","ftui-door fa-blink warn"]'
+				 data-background-icons='["fa-circle-thin","none","fa-circle-thin"]'
+				 data-colors='["green","firebrick","firebrick"]'
+				 data-background-colors='["#3D4C66","none","#3D4C66"]'
+				 class="bigger">
+			</div>
+			<div class="">Wohnungstür<br />&nbsp;
+			</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-left" data-row="4" data-col="7" data-sizex="2" data-sizey="2">
+	<header class="headerTransparent">SARAH</header>
+	<div data-type="homestatus"
+		 data-device='rr_Sarah'
+		 data-get-on='["home","asleep","absent","gone"]'
+		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
+		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
+		 data-width="240"
+		 data-height="240"
+		 data-fgcolor="cornflowerblue"
+		 data-tkcolor="#3D4C66"
+		 data-mincolor="black"
+		 data-maxcolor="#808080"
+		 class="left left-space">
+	</div>
+	<div data-type="pagetab"
+		 data-url="kalender_sarah.html"
+		 data-icon="fa-calendar"
+		 data-background-icon="fa-circle-thin"
+		 data-off-color="#808080"
+		 data-on-background-color="#aa6900"
+		 class="bigger right"
+		 style="top: -30px; left: -10px;">
+	</div>
+</li>
+
+</ul>
+</div>
+</body>
+</html>
