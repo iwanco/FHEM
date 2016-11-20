@@ -258,84 +258,133 @@
 		</div>
 	</div>
 </li>
-
-<li class="halbTransparent border-right" data-row="2" data-col="2" data-sizex="1" data-sizey="2">
-	<header class="headerTransparent">AB</header>
+<li class="halbTransparent" data-row="2" data-col="2" data-sizex="7" data-sizey="1">
+	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top-space">
-		<div data-type="symbol"
-			 data-background-icon="none"
-			 data-device="FritzBox_7362"
-			 data-get="tam1_newMsg"
-			 data-states='["0","[1-9]{1}|[0-9]{2}"]'
-			 data-icons='["ma-voicemail","ma-voicemail warn"]'
-			 data-on-colors='["#808080","#aa6900"]'
-			 class="bigger">
+		<div class="inline">
+			<div data-type="symbol"
+				 data-device="FK.Kueche"
+				 data-get-on="opened.*"
+				 data-get-off="closed.*"
+				 data-off-color="#3D4C66"
+				 data-on-color="firebrick"
+				 class="bigger">
+			</div>
+			<div class="">&nbsp;
+			</div>
 		</div>
-		<div class="">Nachrichten
+		<div class="inline left-space-3">
+			<div id="wdtimer_ftui"
+				 data-type="wdtimer" 
+				 data-device="bad_heatingcontrol"    
+				 data-style="square" 
+				 data-theme="custom"
+				 data-width="800"
+				 data-height="600"
+				 data-title="Bad - Heizzeiten"
+				 data-savecfg="true"
+				 data-cmdlist='{"15°C Eco":"eco","18°C":"18.0","20°C":"20.0","22°C Komfort":"comfort"}'>
+				<div data-type="push"
+					 data-off-color="#808080"
+					 data-off-background-color="#3D4C66"
+					 data-icon="fa-wrench"
+					 class="bigger">
+				</div>
+				<div class="">Programm
+				</div>
+			</div>
 		</div>
-		<div data-type="switch"
-			 data-device="FritzBox_7362"
-			 data-get="tam1_state"
-			 data-set="tam 1"
-			 data-on-color="black"
-			 data-off-color="#808080"
-			 data-on-background-color="cornflowerblue"
-			 data-off-background-color="#3D4C66"
-			 data-icon="ma-voicemail"
-			 class="bigger top-space-2">
+		<div class="inline left-space-3">
+			<div data-type="switch"
+				 data-device="TM.Centrale"
+				 data-get="desiredTemperature"
+				 data-get-on="5.0"
+				 data-get-off="^(?!5.0).*$"
+				 data-set="desiredTemperature"
+				 data-set-on="5.0"
+				 data-set-off=""
+				 data-icon="fs-frost"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="cornflowerblue"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="bigger">
+			</div>
+			<div class="">5°C
+			</div>
 		</div>
-		<div class="">An/Aus
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="TM.Centrale"
+				 data-get="desiredTemperature"
+				 data-get-on="15.0"
+				 data-get-off="^(?!15.0).*$"
+				 data-set="desiredTemperature"
+				 data-set-on="eco"
+				 data-set-off=""
+				 data-icon="ma-brightness_3"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="cornflowerblue"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="bigger">
+			</div>
+			<div class="">15°C
+			</div>
+		</div>
+		<div class="inline left-space-2 right-space-2">
+            <div data-type="spinner"
+                 data-device="TM.Centrale"
+				 data-get="desiredTemperature"
+				 data-set="desiredTemperature"
+                 data-icon-left-color="blue"
+                 data-icon-right-color="red"
+                 data-min="4.5"
+                 data-max="25.0"
+				 data-step="0.5"
+				 data-width="250"
+				 data-height="70"
+				 data-unit="°"
+				 data-longdelay="2500"
+				 data-background-color="rgba(61,76,102,0.5"
+                 class="valueonly"
+				 style="margin-bottom:6px;">
+            </div>
+			<div class="">Temperatur
+			</div>
+		</div>
+		<div class="inline">
+			<div data-type="switch"
+				 data-device="bad_WT"
+				 data-get="desiredTemperature"
+				 data-get-on="22.0"
+				 data-get-off="^(?!22.0).*$"
+				 data-set="desiredTemperature"
+				 data-set-on="comfort"
+				 data-set-off=""
+				 data-icon="ro-sun"
+				 data-background-icon="fa-circle-thin"
+				 data-on-color="green"
+				 data-off-color="#808080"
+				 data-on-background-color="#aa6900"
+				 data-off-background-color="#3D4C66"
+				 class="bigger">
+			</div>
+			<div data-type="label"
+				 class="">22°C
+			</div>
 		</div>
 	</div>
 </li>
-
-<li class="halbTransparent border-right" data-row="2" data-col="3" data-sizex="5" data-sizey="2" style="overflow:auto;">
+<li class="halbTransparent border-right" data-row="2" data-col="3" data-sizex="5" data-sizey="1" style="overflow:auto;">
 	<header class="headerTransparent">ANRUFE</header>
 	<table width="100%" class="">
 		<tr>
 		</tr>
  	</table>
  </li>
-
-<li class="halbTransparent" data-row="2" data-col="8" data-sizex="1" data-sizey="2">
-	<header class="headerTransparent">MÜLL</header>
-	<div class="top-space">
-		<div data-type="button"
-			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Restmuell_tage"
-			 data-off-color="#808080"
-			 data-fhem-cmd="setreading myAbfall Restmuell_tage off"
-			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
-			 data-icons='["ro-bin warn","ro-bin warn","ro-bin warn blink","ro-bin warn"]'
-			 data-on-colors='["#808080","#808080","#808080","#808080"]'
-			 class="bigger">
-		</div>
-		<div data-type="button"
-			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Papier_tage"
-			 data-off-color="cornflowerblue"
-			 data-fhem-cmd="setreading myAbfall Papier_tage off"
-			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
-			 data-icons='["fs-bag warn","fs-bag warn","fs-bag warn blink","fs-bag warn"]'
-			 data-on-colors='["cornflowerblue","cornflowerblue","cornflowerblue","cornflowerblue"]'
-			 class="bigger">
-		</div>
-		<div data-type="button"
-			 data-background-icon="none"
-			 data-device="myAbfall"
-			 data-get="Plastik_tage"
-			 data-off-color="yellow"
-			 data-fhem-cmd="setreading myAbfall Plastik_tage off"
-			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
-			 data-icons='["fs-bag warn","fs-bag warn","fs-bag warn blink","fs-bag warn"]'
-			 data-on-colors='["yellow","yellow","yellow","yellow"]'
-			 class="bigger">
-		</div>
-	</div>
-</li>
-
 <li class="halbTransparent border-left border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
 	<header class="headerTransparent">EXTRAS</header>
 <div data-type="pagetab"
