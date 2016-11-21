@@ -225,7 +225,7 @@
 		</div>
 	</div>
 </li>
-<li class="halbTransparent" data-row="2" data-col="2" data-sizex="7" data-sizey="2">
+<li class="halbTransparent" data-row="2" data-col="2" data-sizex="7" data-sizey="1">
 	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top-space">
 		<div class="inline left-space-3">
@@ -478,7 +478,7 @@
 </li>
 
 <li class="halbTransparent border-right" data-row="4" data-col="2" data-sizex="2" data-sizey="2">
-	<header class="headerTransparent">ROMAN</header>
+	<header class="headerTransparent">PROGRAMME</header>
 	<div data-type="homestatus"
 		 data-device='rr_Roman'
 		 data-get-on='["home","asleep","absent","gone"]'
@@ -527,82 +527,6 @@
 	</div>	
 </li>
 
-<li class="halbTransparent" data-row="5" data-col="4" data-sizex="3" data-sizey="1">
-	<header class="headerTransparent">TÜR</header>
-	<div class="top-space">
-		<div class="inline">
-			<div data-type="push"
-				 data-device="fl_tueroeffner"
-				 data-set=""
-				 data-set-on="on-for-timer 4"
-				 data-icon="fa-key"
-				 data-off-color="#808080"
-				 data-off-background-color="#3D4C66"
-				 class="bigger right-space-3">
-			</div>
-			<div class="right-space-3">Summer<br />Haustür
-			</div>
-		</div>
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="KeyMatic"
-				 data-get="state"
-				 data-set=""
-				 data-states='["locked","unlocked"]'
-				 data-set-states='["unlock","lock"]'
-				 data-icons='["fa-lock","fa-unlock"]'
-				 data-background-icons='["fa-circle","fa-circle"]'
-				 data-colors='["green","firebrick"]'
-				 data-background-colors='["#3D4C66","cornflowerblue"]'
-				 class="bigger">
-			</div>
-			<div class="">Schloss<br />Wohnungstür
-			</div>
-		</div>
-		<div class="inline">
-			<div data-type="switch"
-				 data-device="KeyMatic"
-				 data-get="door"
-				 data-set="door"
-				 data-states='["closed","open","MISSING.*"]'
-				 data-set-states='["open","",""]'
-				 data-icons='["ftui-door","ftui-door fa-lg","ftui-door fa-blink warn"]'
-				 data-background-icons='["fa-circle-thin","none","fa-circle-thin"]'
-				 data-colors='["green","firebrick","firebrick"]'
-				 data-background-colors='["#3D4C66","none","#3D4C66"]'
-				 class="bigger">
-			</div>
-			<div class="">Wohnungstür<br />&nbsp;
-			</div>
-		</div>
-	</div>
-</li>
-
-<li class="halbTransparent border-left" data-row="4" data-col="7" data-sizex="2" data-sizey="2">
-	<header class="headerTransparent">SARAH</header>
-	<div data-type="homestatus"
-		 data-device='rr_Sarah'
-		 data-get-on='["home","asleep","absent","gone"]'
-		 data-alias='["Home","Bett","unterwegs","Urlaub"]'
-		 data-icons='["fa-home","fa-bed","fa-car","fa-plane"]'
-		 data-width="240"
-		 data-height="240"
-		 data-fgcolor="cornflowerblue"
-		 data-tkcolor="#3D4C66"
-		 data-mincolor="black"
-		 data-maxcolor="#808080"
-		 class="left left-space">
-	</div>
-	<div data-type="pagetab"
-		 data-url="kalender_sarah.html"
-		 data-icon="fa-calendar"
-		 data-background-icon="fa-circle-thin"
-		 data-off-color="#808080"
-		 data-on-background-color="#aa6900"
-		 class="bigger right"
-		 style="top: -30px; left: -10px;">
-	</div>
-</li>
 
 </ul>
 </div>
