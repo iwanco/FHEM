@@ -64,26 +64,12 @@
 		<div class="inline" style="width:30%;">
 			<div data-type="label" 
 				 data-device="OUT.Wetter"
-			     	 data-get="temperature"
+			     	 data-get="temp_c"
 				 data-limits='[-73,18,28]' 
 				 data-colors='["cornflowerblue","green","firebrick"]' 
 				 data-unit="%B0C%0A" 
 				 data-substitution="s/(\d$)//g"
 				 class="big">
-			</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="pressure_trend"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="pressure_trend"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
 			</div>
 			<div class="top-space">Temperatur
 			</div>
@@ -97,20 +83,6 @@
 					 data-unit="%" 
 					 class="big">
 				</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="statHumidityTendency"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="statHumidityTendency"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
-			</div>
 				<div class="top-space">Luftfeuchte
 				</div>
 		</div>
@@ -123,20 +95,6 @@
 					 data-unit="km/h" 
 					 class="big">
 				</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="statDewPointTendency"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="OUT.Wetter"
-					 data-get="statDewPointTendency"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
-			</div>
 				<div class="top-space">Wind
 				</div>
 		</div>
