@@ -27,19 +27,6 @@
 	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top-space">
 		<div class="inline">
-			<div data-type="checkbox"
-				 data-device="TM.Centrale_Climate"
-			     	 data-get="ControlMode"
-			     	 data-set="ControlMode"
-			     	 data-set-on="auto"
-				 data-on-color="black"
-				 data-off-color="#808080"
-				 data-on-background-color="cornflowerblue"
-				 data-off-background-color="#3D4C66"
-				 class="green large cell top-space">
-			</div>
-			<div class="top-space">Wochenprogramm
-			</div>
 		</div>
 	</div>
 </li>
@@ -225,8 +212,9 @@
 		<div class="inline">
 			<div data-type="symbol"
 				 data-device="FK.Terrasse"
-				 data-get-on="opened.*"
-				 data-get-off="closed.*"
+			     	 data-get="state"
+				 data-get-on="open"
+				 data-get-off="closed"
 				 data-off-color="#3D4C66"
 				 data-on-color="firebrick"
 				 class="bigger">
