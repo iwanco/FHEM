@@ -221,7 +221,7 @@
 	<div class="top-space">
 		<div class="inline">
 			<div data-type="symbol"
-				 data-device="FK.Kueche"
+				 data-device="FK.Terrasse"
 				 data-get-on="opened.*"
 				 data-get-off="closed.*"
 				 data-off-color="#3D4C66"
@@ -232,33 +232,12 @@
 			</div>
 		</div>
 		<div class="inline left-space-3">
-			<div id="wdtimer_ftui"
-				 data-type="wdtimer" 
-				 data-device="bad_heatingcontrol"    
-				 data-style="square" 
-				 data-theme="custom"
-				 data-width="800"
-				 data-height="600"
-				 data-title="Bad - Heizzeiten"
-				 data-savecfg="true"
-				 data-cmdlist='{"15°C Eco":"eco","18°C":"18.0","20°C":"20.0","22°C Komfort":"comfort"}'>
-				<div data-type="push"
-					 data-off-color="#808080"
-					 data-off-background-color="#3D4C66"
-					 data-icon="fa-wrench"
-					 class="bigger">
-				</div>
-				<div class="">Programm
-				</div>
-			</div>
-		</div>
-		<div class="inline left-space-3">
 			<div data-type="switch"
-				 data-device="TM.Centrale"
-				 data-get="desiredTemperature"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
 				 data-get-on="5.0"
 				 data-get-off="^(?!5.0).*$"
-				 data-set="desiredTemperature"
+				 data-set="desired-temp"
 				 data-set-on="5.0"
 				 data-set-off=""
 				 data-icon="fs-frost"
@@ -274,11 +253,11 @@
 		</div>
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="TM.Centrale"
-				 data-get="desiredTemperature"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
 				 data-get-on="15.0"
 				 data-get-off="^(?!15.0).*$"
-				 data-set="desiredTemperature"
+				 data-set="desired-temp"
 				 data-set-on="eco"
 				 data-set-off=""
 				 data-icon="ma-brightness_3"
@@ -295,8 +274,8 @@
 		<div class="inline left-space-2 right-space-2">
             <div data-type="spinner"
                  data-device="TM.Centrale"
-				 data-get="desiredTemperature"
-				 data-set="desiredTemperature"
+				 data-get="desired-temp"
+				 data-set="desired-temp"
                  data-icon-left-color="blue"
                  data-icon-right-color="red"
                  data-min="4.5"
@@ -315,11 +294,11 @@
 		</div>
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="bad_WT"
-				 data-get="desiredTemperature"
+				 data-device="TM.Centrale_Climate"
+				 data-get="desired-temp"
 				 data-get-on="22.0"
 				 data-get-off="^(?!22.0).*$"
-				 data-set="desiredTemperature"
+				 data-set="desired-temp"
 				 data-set-on="comfort"
 				 data-set-off=""
 				 data-icon="ro-sun"
