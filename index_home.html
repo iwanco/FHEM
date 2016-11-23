@@ -281,13 +281,13 @@
 		 class="bigger">
 	</div>
 	<div data-type="popup"
-		 data-device="alarm_scharf"
-		 data-get-on="on"
+		 data-device="s_AlarmStatus"
+		 data-get-on="arm"
 		 data-width="350px"
 		 data-height="525px">
 		<div data-type="symbol"
-			 data-device="dummy_alarm"
-			 data-states='["on","off"]'
+			 data-device="s_AlarmStatus"
+			 data-states='["arm","disarm"]'
 			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
 			 data-colors='["firebrick","#808080"]'
 			 data-background-icons='["fa-circle","none"]'
@@ -301,9 +301,9 @@
 				</div>
 				<div onclick="$('.dialog-close').trigger('click');"
 					 data-type="switch"
-					 data-device="dummy_alarm"
+					 data-device="s_AlarmArm"
 					 data-states='["on","off"]'
-					 data-set-states='["on","on"]'
+					 data-set-states='["arm","arm"]'
 					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
 					 data-colors='["firebrick","#808080"]'
 					 data-background-icons='["fa-circle","fa-circle"]'
