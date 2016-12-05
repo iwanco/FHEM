@@ -286,7 +286,7 @@
 </li>
 <li class="halbTransparent" data-row="3" data-col="2" data-sizex="5" data-sizey="2">
 	<header class="headerTransparent">HEIZUNG</header>
-	<div class="top-space">
+	<div class="top">
 		<div class="inline">
 			<div data-type="switch"
 				 data-device="TM.Centrale_Climate"
@@ -350,6 +350,26 @@
 			</div>
 		</div>
 	</div>
+	<div class="centered top">
+		<div data-type="link"
+			 data-width="160"
+			 data-height="60"
+			 data-color="black"
+			 data-background-color="green"
+			 data-icon="fa-home"
+			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
+			 class="round big inline">AUTO
+		</div>
+		<div data-type="link"
+			 data-width="160" 
+			 data-height="60"
+			 data-color="black"
+			 data-background-color="cornflowerblue"
+			 data-icon="ma-brightness_3"
+			 data-fhem-cmd="set TM.Centrale_Climate controlManu 15.0"
+			 class="round big inline left-space-2">ECO
+		</div>
+	</div>	
 </li>
 <li class="halbTransparent border-right" data-row="3" data-col="7" data-sizex="2" data-sizey="4">
 	<header class="headerTransparent">PROGRAMME</header>
