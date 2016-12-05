@@ -23,9 +23,9 @@
 	</div>
 </li>
 
-<li class="halbTransparent" data-row="1" data-col="2" data-sizex="2" data-sizey="2">
+<li class="halbTransparent" data-row="1" data-col="2" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">Fenster</header>
-	<div class="top-space-2">
+	<div class="top">
 		<div class="inline">
 			<div data-type="symbol"
 				 data-device="FK.Terrasse"
@@ -67,9 +67,9 @@
 		</div>
 	</div>
 </li>
-<li class="halbTransparent border-left" data-row="1" data-col="4" data-sizex="2" data-sizey="1">
+<li class="halbTransparent border-left" data-row="2" data-col="2" data-sizex="2" data-sizey="1">
 	<header class="headerTransparent">INNENTEMPERATUR</header>	
-	<div class="centered">
+	<div class="top-space">
 		<div class="inline ">
 				<div data-type="label" 
 					 data-device="TM.Centrale_Climate"
@@ -96,60 +96,130 @@
 		</div>
 	</div>
 </li>
-<li class="halbTransparent border-left" data-row="2" data-col="4" data-sizex="2" data-sizey="1">
+<li class="halbTransparent border-right border-left" data-row="1" data-col="4" data-sizex="3" data-sizey="2">
 	<header class="headerTransparent">AUßENTEMPERATUR</header>	
-	<div class="centered">
-		<div class="inline ">
-				<div data-type="label" 
-					 data-device="OUT.Wetter"
-					 data-get="temp_c"
-					 data-limits='[-20,18,40]' 
-					 data-colors='["cornflowerblue","green","firebrick"]' 
-					 data-unit="%B0C%0A" 
-					 class="big">
+	<div class="top-space">
+		<div class="inline" style="width:30%">
+			<div data-type="label" 
+				 data-device="Wetter_Pro"
+			     	 data-get="temperature"
+				 data-limits='[-20,18,40]' 
+				 data-colors='["cornflowerblue","green","firebrick"]' 
+				 data-unit="%B0C%0A" 
+				 class="big">
+			</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="1"
+					 class="inline large" >
 				</div>
-				<div class="">Temperatur
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statTemperatureTendency"
+					 data-refperiod="2"
+					 class="inline large" >
 				</div>
+			</div>
+			<div class="top-space">Temperatur
+			</div>
 		</div>
-		<div class="inline">
+		<div class="inline" style="width:30%">
 				<div data-type="label" 
-					 data-device="OUT.Wetter"
+					 data-device="Wetter_Pro"
 					 data-get="humidity"
 					 data-limits='[0,40,71]' 
 					 data-colors='["cornflowerblue","green","firebrick"]' 
 					 data-unit="%" 
 					 class="big">
 				</div>
-				<div class=" ">Luftfeuchte
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statHumidityTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Luftfeuchte
+				</div>
+		</div>
+		<div class="inline" style="width:30%">
+				<div data-type="label" 
+					 data-device="Wetter_Pro"
+					 data-get="dewPoint"
+					 data-limits='[-73,18,28]' 
+					 data-colors='["cornflowerblue","green","firebrick"]'  
+					 data-unit="%B0C%0A" 
+					 class="big">
+				</div>
+			<div class="top-space">
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="1"
+					 class="inline large" >
+				</div>
+				<div data-type="klimatrend"
+					 data-device="Wetter_Pro"
+					 data-get="statDewPointTendency"
+					 data-refperiod="2"
+					 class="inline large" >
+				</div>
+			</div>
+				<div class="top-space">Taupunkt
+				</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-left border-right" data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">Diesel</header>
+	<div class="centered">
+		<div class="inline ">
+				<div data-type="label" 
+					 data-device="Aral"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="€" 
+					 class="big">
+				</div>
+				<div class="">Aral
 				</div>
 		</div>
 		<div class="inline">
 				<div data-type="label" 
-					 data-device="OUT.Wetter"
-					 data-get="wind"
-					 data-limits='[-73,18,28]' 
-					 data-colors='["cornflowerblue","green","firebrick"]'  
-					 data-unit="km/h" 
+					 data-device="Jet"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]' 
+					 data-unit="€" 
 					 class="big">
 				</div>
-				<div class="">Wind
+				<div class=" ">Jet
+				</div>
+		</div>
+		<div class="inline">
+				<div data-type="label" 
+					 data-device="Shell"
+					 data-get="Diesel"
+					 data-limits='[1.00,1.10,2.00]' 
+					 data-colors='["cornflowerblue","green","firebrick"]'  
+					 data-unit="€" 
+					 class="big">
+				</div>
+				<div class="">Shell
 				</div>
 		</div>
 	</div>
 </li>
-<li class="halbTransparent border-left border-right" data-row="1" data-col="6" data-sizex="2" data-sizey="2">
-	<header class="headerTransparent">WETTER</header>
-	<div data-type="pagetab"
-		 data-url="wetter.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="fa-cloud"
-		 class="bigger top-space">
-	</div>
-</li>
-
 <li class="halbTransparent border-right" data-row="1" data-col="8" data-sizex="2" data-sizey="2">
 	<header class="headerTransparent">UHRZEIT / DATUM</header>
 	<div data-type="clock"
@@ -190,6 +260,15 @@
 			 data-off-color="#808080"
 			 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
 			 class="bigger">
+		</div>
+		<div data-type="pagetab"
+			 data-url="wetter.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#808080"
+			 data-off-color="#808080"
+			 data-icon="fa-cloud"
+			 class="bigger top-space">
 		</div>
 		<div data-type="pagetab"
 			 data-device="dr_ga_alert"
