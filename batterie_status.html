@@ -395,8 +395,9 @@
 				<div class="">Alarm scharf schalten:
 				</div>
 				<div onclick="$('.dialog-close').trigger('click');"
-					 data-type="link"
+					 data-type="switch"
 					 data-device="s_AlarmStatus"
+				     	 data-get-on="arm"
 					 data-states='["arm","disarm"]'
 				     	 data-fhem-cmd="set s_AlarmArm arm"
 					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
