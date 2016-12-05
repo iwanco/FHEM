@@ -555,31 +555,131 @@
 	</div>
 </li>
 
-<li class="halbTransparent" data-row="5" data-col="2" data-sizex="5" data-sizey="2">
-	<header class="headerTransparent">ECO-TASTER</header>
-	<div class="centered top-space-2">
-		<div data-type="link"
-			 data-width="160"
-			 data-height="60"
-			 data-color="black"
-			 data-background-color="green"
-			 data-icon="fa-home"
-			 data-fhem-cmd="set TM.Centrale_Climate controlMode auto"
-			 class="round big inline">AUTO
-		</div>
-		<div data-type="link"
-			 data-width="160" 
-			 data-height="60"
-			 data-color="black"
-			 data-background-color="cornflowerblue"
-			 data-icon="ma-brightness_3"
-			 data-fhem-cmd="set TM.Centrale_Climate controlManu 15.0"
-			 class="round big inline left-space-2">ECO
-		</div>
-	</div>	
+<li data-row="5" data-col="2" data-sizex="5" data-sizey="2">
+	<header><div data-type="label" class="large">KALENDER</div></header>
+        <table class="" width="100%" style="font-size:100%">
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_001_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_001_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_001_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_001_summary" style="min-width:14em;"></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_002_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_002_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_002_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_002_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_003_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_003_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_003_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_003_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_004_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_004_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_004_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_004_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_005_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_005_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_005_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_005_summary" ></div></td>
+        </tr>
+		        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_006_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_006_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_006_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_006_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_007_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_007_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_007_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_007_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_008_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_008_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_008_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_008_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_009_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_009_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_009_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_009_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Iwan_Dascha" data-get="t_010_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_010_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Iwan_Dascha" data-get="t_010_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Iwan_Dascha" data-get="t_010_summary" ></div></td>
+        </tr>
+    </table>
 </li>
-
-
 </ul>
 </div>
 </body>
