@@ -672,7 +672,25 @@
 </li>
 	
 <li class="halbTransparent border-left border-right" data-row="5" data-col="7" data-sizex="2" data-sizey="2">
-	<header class="headerTransparent">KALENDER</header>	
+	<header class="headerTransparent">Fahrzeiten</header>	
+	<table class="calls" width="100%">
+		<tr class="darker">
+			<th>Ziel</th>
+			<th>Normal</th>
+			<th>Aktuell</th>
+		</tr>
+		<tr>
+			<td>
+				<div data-type="label" class="cell">Kostal:</div>
+			</td>
+			<td>
+				<div data-type="label" data-device="FahrzeitHomeWork" data-part="Normal:(.*).*Aktuell.*"></div>
+			</td>
+			<td>
+				<div data-type="label" data-device="FahrzeitHomeWork" data-part=".*Aktuell:(.*).*"></div>
+			</td>
+		</tr>
+	</table>
 </li>
 </ul>
 </div>
